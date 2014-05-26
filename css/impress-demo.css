@@ -69,6 +69,10 @@ q:before, q:after {
     content: none;
 }
 
+p{
+margin-bottom:10px;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -228,7 +232,7 @@ a:focus {
 }
 .indent
 {
-margin-left:20px;
+margin-left:30px;
 }
 
 .slide q {
@@ -706,3 +710,28 @@ margin-left:20px;
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
+
+
+
+/*Customizations*/
+
+.smaller
+{
+font-size:0.8em;
+}
+.green
+{
+color:Green;
+}
+.red
+{
+color:Red;
+}
+.blue
+{
+Color:Blue;
+}
+.very-small
+{
+0.6em;
+}
