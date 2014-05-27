@@ -153,13 +153,14 @@
                 </br>
                 <li>2.What are the challenges?</li>
                 </br>
-                <li>3.How to make SA?</li>
+                <li>3.How to do we do it?</li>
+                <li class="indent">3.1.Classification</li>
                 </br>
                 <li>4.Building Model step by step</li>
 
 
                 </br>
-                <li>5.Examples</li>
+                <li>5.Resourses</li>
 
             </ol>
 
@@ -280,16 +281,12 @@
                 “Dear 'hardware store'.
             <p>
                 Yesterday I had occasion to visit 'your competitor'
-                . The had an excellent
+                . They had an excellent
                 selection, friendly and helpful salespeople,
                 and the lowest prices in town.
                 You guys suck.
             </p>
             <p class="indent-half">  Sincerely,....”</p>
-            </p>
-
-
-
 
         </div>
         <!--
@@ -312,60 +309,281 @@
             Only one current step has the `present` class.
 
         -->
-        <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-            <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+        <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="2">
+            <p>3. How <b class="positioning blue">do </b>, <b class="rotating">we </b> do <b class="scaling">it</b> ?</p>
         </div>
 
         <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-            <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+            <p>Here come the <b>  </b>  <b class="imagination"> classification </b> methods  </p>
         </div>
 
-        <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-            <p>want to know more?</p>
-            <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+        <div class="step slide" data-x="3000" data-y="-3100">
+            <q><strong>3.How do we do it?</strong></q>
+            <q><strong>Classification</strong></q>
+            <p class="indent">
+                - Target classes (yes/no , 1 -5 stars, continuous)
+            </p>
+            <p class="indent">
+                -  Instances (pieces of text)
+            </p>
+            <p class="indent">
+                - Features - <span class="blue">words</span> with their sentiment
+            </p>
+            <p class="indent">
+                -Simpliest Posible  Algorithm : sum the scores of words in each comment and set a <span class="green">threshold</span> for positive / negative
+            </p>
+
         </div>
 
-        <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-            <p>one more thing...</p>
+        <div class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+            <q><strong>3.How do we do it?</strong></q>
+            <p>Machine learning</p>
+            <p class="indent">
+                - Supervised
+            </p>
+            <p class="indent">
+                -  Unsupervised
+            </p>
+            <p class="indent">
+                -Good Corpus
+            </p>
         </div>
 
-        <!--
-
-            And the last one shows full power and flexibility of impress.js.
-
-            You can not only position element in 3D, but also rotate it around any axis.
-            So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-            10 degrees (clockwise) around Y axis.
-
-            You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-            as `data-rotate` (these two are basically aliases).
-
-        -->
-        <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-            <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-            <span class="footnote">* beat that, prezi ;)</span>
+        <div class="step" data-x="6000" data-y="4000" data-scale="2">
+            <p>Other machine learning features...</p>
         </div>
 
-        <!--
 
-            So to make a summary of all the possible attributes used to position presentation steps, we have:
+        <div id="its-in-3d" class="step" data-x="9200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+            <p> <span class="have">Tokens / token roots</span></p>
+            <p> <span class="you"> Sentence length   </span> </p>
+            <p><span class="noticed">  Named entities / dictionaries    </span>    </p>
+            <p> <span class="its"> Relations (denial, phrases, etc.)  </span>  </p>
+            <p> <span class="in"> Key phrases                        </span>  </p>
+        </div>
 
-            * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-                the canvas in pixels; their default value is 0;
-            * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-                the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-                are exactly the same;
-            * `data-scale` - defines the scale of step element; default value is 1
+        <div id="one-more-thing" class="step" data-x="6000" data-y="5000" data-scale="2">
+            <p>Just to mention...</p>
+        </div>
 
-            These values are used by impress.js in CSS transformation functions, so for more information consult
-            CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        <div class="step slide perceptron" data-x="4000" data-y="-3100">
+            <q><strong>3.How do we do it?</strong></q>
+            <q><strong>Supervied methods</strong></q>
+            <p class="indent">
+                - Perceptron - The simplest algorithm to learn to separate two classes
+            </p>
+            <div class="indent-right smaller">
+                <p>  -Calculates the dot product of the input and weight vectors   </p>
+                <p> - Learns by example                                            </p>
+                <p> - Outputs                                                      </p>
+                <p class="indent"> - Threshold value Yes / No                                     </p>
+                <p class="indent"> - Real value (-1, 1)                                           </p>
 
-        -->
+            </div>
+
+        </div>
+
+        <div class="step" data-x="6000" data-y="9000" data-scale="2">
+            <p>A bit of a problem , works OK only for linear separable data</p>
+        </div>
+
+        <div class="step slide back-propagation" data-x="5000" data-y="-3100">
+            <q><strong>3.How do we do it?</strong></q>
+            <q><strong>Supervied methods</strong></q>
+            <p class="indent">
+                - Backpropagation - the network learns from many inputs
+            </p>
+            <div class="indent-right smaller">
+                <p>  Tries to minimize the error of the input weights   </p>
+                <p> -  works Good  for non linear separable data                                          </p>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="step slide" data-x="3000" data-y="-3900">
+            <q><strong>3.How do we do it?</strong></q>
+            <q><strong>Supervied methods</strong></q>
+            <p class="indent">
+                -<span class="green"> Naïve Bayes </span> algorithm (max likelihood) - Find the most likely class c, given some features
+
+            <p>Calculate the probability of the similar features</p>
+            <p>  -<span class="blue">small amount</span> of training data   </p>
+            <p> -training time is significantly smaller as opposed to alternative methods.               </p>
+            <p> - works better  for non linear separable data     </p>
+
+
+        </div>
+
+        <div class="step slide" data-x="3000" data-y="-4900">
+            <q><strong>3.How do we do it?</strong></q>
+            <q><strong>Supervied methods</strong></q>
+            <p class="indent">
+                -<span class="green"> Naïve Bayes  Variations</span>
+
+            <p class="indent-quarter">-Multinomial Naive Bayes</p>
+            <p class="indent-quarter">  -Binarized Multinomial Naive Bayes   </p>
+            <p class="indent-quarter"> -Bernoulli Naive Bayes.               </p>
+
+            * Note that each can deliver completely different results since they use completely different models.
+
+        </div>
+
+
+        <div class="step " data-x="6300" data-y="-7000" data-rotate="20" data-scale="10">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="red smaller">Regardless the method ,those are the steps:</p>
+            <p class="indent smaller">  Collect data       </p>
+            <p class="indent smaller">  Label Your Data    </p>
+            <p class="indent smaller">  Prepare Your Data  </p>
+            <p class="indent smaller">  Train a Model      </p>
+            <p class="indent smaller">  Make Predictions   </p>
+            <p class="indent smaller">  Update Your Model  </p>
+            <p class="indent smaller">  Conclusion         </p>
+
+        </div>
+
+        <div class="step slide" data-x="5300" data-y="-7000" data-rotate="20">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue smaller">Collect data</p>
+            <p>For example tweets:</p>
+
+            <p class="indent green">"Feeling kind of low...."</p>
+            <p class="indent green">
+                "OMG! Just had a fabulous day!"
+            </p>
+            <p class="indent green">
+                "Eating eggplant. Why bother?"
+            </p>
+            * For a good model, you will need at least several hundred examples,
+            if not thousands.
+
+        </div>
+
+
+        <div class="step slide" data-x="5300" data-y="-8000" data-rotate="10">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Label Your Data</p>
+            <p>
+                Once you have collected your training samples, you will need to pre-classify each sample with a label.
+                A label is a string that you think best describes that example, for example: "happy", "sad", "on the fence".
+            </p>
+            </br>
+            <p class="indent green">"sad","Feeling kind of low...."</p>
+            <p class="indent green">
+                "excited", "OMG! Just had a fabulous day!"
+            </p>
+            <p class="indent green">
+                "bored","Eating eggplant. Why bother?"
+            </p>
+            </br>
+            <p>*Can have more than one label for instance in needed</p>
+        </div>
+
+
+        <div class="step slide" data-x="6300" data-y="-8000" data-rotate="30">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Prepare Your Data </p>
+
+            <p class="indent green"> - Put the data in the correct format, very common format is CSV "</p>
+            <p class="indent green">
+                - add metadata if exists, like word count, time of posting and ect. For example :
+
+            </p>
+            <p class="indent-quarter red">    label1, tweet, word count, post time,....</p>
+            <p class="indent-quarter">  "sad", "Feeling kind of low....", 4, 18.30             </p>
+            <p class="indent-quarter">  "excited", "OMG! Just had a fabulous day!", 6, 9.10   </p>
+            <p class="indent-quarter">  "bored", "Eating eggplant. Why bother?", 4, 12.00     </p>
+
+        </div>
+
+        <div class="step slide" data-x="6700" data-y="-9000" data-rotate="40">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Train a Model </p>
+
+            <p class="indent green"> - The train data should be around 10% from the corpus "</p>
+            <p class="indent green">
+               - Using some of described methods for classification train the model
+
+            </p>
+            <p class="indent red"> -Sometimes the training could be a slow process </p>
+       
+
+        </div>
+
+        <div class="step " data-x="4300" data-y="-8000" data-rotate="60">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Make Predictions </p>
+            <p> -Now that you have successfully built a model</p>
+            <p>  -It is time to actually make predictions</p>
+           
+               <p class="indent green"> - Use the ramaining data araund 90% from the corpus "</p>
+           
+
+
+        </div>
+
+
+
+        <div class="step " data-x="7300" data-y="-7000" data-rotate="50">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Update Your Model with New Data </p>
+            <p> -You can continue to improve your model by adding additional examples</p>
+
+            <p class="indent green"> - There are two ways to add additional examples to your model:"</p>
+            <p class="indent-quarter"> Add the new data to the original data file and retrain the model  </p>
+            <p class="indent-quarter">  Update your existing model </p>
+
+
+
+        </div>
+
+        <div class="step " data-x="9300" data-y="-7000" data-rotate="50" data-scale="4">
+            <q><strong>4.Building Model step by step</strong></q>
+            <p class="blue ">Conclusion </p>
+            <p> Should have classified features after it</p>
+
+        </div>
+
+        <div class="step " data-x="-9300" data-y="-7000" data-rotate="50" >
+            <q><strong>5.Resourses</strong></q>
+            
+            <p class="smaller">https://developers.google.com/prediction/docs/sentiment_analysis</p>
+            <p class="smaller"> http://www.lct-master.org/files/MullenSentimentCourseSlides.pdf</p>
+            <p class="smaller">http://www.lexalytics.com/technical-info/named-entity-and-theme-sentiment-analysis</p>
+            <p class="smaller">http://page.mi.fu-berlin.de/rojas/neural/chapter/K7.pdf</p>
+            <p class="smaller">Gennady Agre - Machine Learning Lecturers</p>
+           
+            
+
+        </div>
+
+
+
+
+
+
+        <!--dont touch this div! below-->
         <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
         </div>
-
     </div>
+    <!--
 
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+    -->
     <!--
 
         Hint is not related to impress.js in any way.

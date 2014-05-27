@@ -325,7 +325,7 @@ margin-left:30px;
 /*
     This step has some animated text ...
 */
-#ing { width: 500px }
+#ing { width: 700px }
 
 /*
     ... so we define display to `inline-block` to enable transforms and
@@ -333,11 +333,11 @@ margin-left:30px;
 */
 #ing b {
     display: inline-block;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
+    -webkit-transition: 1s;
+    -moz-transition:    1s;
+    -ms-transition:     1s;
+    -o-transition:      1s;
+    transition:         1s;
 }
 
 /*
@@ -737,4 +737,27 @@ font-size:0.6em;
 }
 .indent-half {
 margin-left:30%;
+}
+.indent-right {
+margin-left:50%;
+}
+.indent-quarter {
+margin-left:15%;
+}
+
+.perceptron {
+       background-image: url(../imgs/Perc.gif);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+   
+}
+.perceptron1 {
+     background-image: url(../imgs/Perc1.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+.back-propagation {
+     background-image: url(../imgs/back.gif);
+    background-position: bottom left;
+    background-repeat: no-repeat;
 }
